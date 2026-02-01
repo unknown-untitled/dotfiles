@@ -1,0 +1,5 @@
+[window]
+padding = { x = 6, y = 4 }
+#decorations = "Full"
+#decorations = "None"
+dynamic_title = true

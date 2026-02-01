@@ -1,0 +1,152 @@
+[{
+    "position": "top",
+    "layer": "top",
+    "height": 38,
+    "spacing": 0,
+    "modules-left": ["niri/window"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "tray",
+        "niri/language",
+        "privacy",
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/settings",
+        ],
+
+    "custom/settings": {
+        "format": " ",
+        "on-click": "swaync-client -t",
+        "tooltip": false 
+    },
+
+    "niri/window": {
+        "separate-outputs": true,
+        "format": "{title}",
+        "icon": true,
+        "icon-size": 20,
+        "rewrite": {
+            "^(.*) — Mozilla Firefox*$": "$1",
+            "^(.*) - Discord$": "$1",
+            "^(.*) - Sublime Text$": "$1",
+            "^(.*) - Sublime Text \\(UNREGISTERED\\)$": "$1",
+            "^(.*) – GIMP$": "$1",
+        }
+    },
+
+    "privacy": {
+        "icon-spacing": 2,
+        "icon-size": 16,
+        "transition-duration": 250,
+            "modules": [
+                {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+                },
+                {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+                }
+            ],
+        "ignore-monitor": true,
+        "ignore": [{
+            "type": "audio-in",
+            "name": "cava"
+            },
+            {
+            "type": "screenshare",
+            "name": "obs"
+            }]
+    },
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "level-10": 10,
+            "level-20": 20,
+            "level-30": 30,
+            "level-40": 40,
+            "level-50": 50,
+            "level-60": 60,
+            "level-70": 70,
+            "level-80": 80,
+            "level-90": 90
+        },
+        "format": " ",
+        "format-charging": " ",
+        "format-plugged": " ",
+        //"format": "{capacity} %",
+        //"format-charging": "{capacity} %",
+        //"format-plugged": "{capacity} %",
+        
+        "tooltip-format": "Capacity: {capacity}%\nTime: {time}\nPower: {power:.1f}W",
+        "on-click": "cosmic-settings power"
+    },
+
+    "network": {
+        "interval": 10,
+        "format-wifi": "{icon} ",
+        "format-disconnected": "{icon} ",
+        "states": {
+            "disconnected": 0,
+            "signal-33": 10,
+            "signal-66": 33,
+            "signal-100": 66
+        },
+        "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nFrequency: {frequency}MHz",
+        "tooltip-format-disconnected": "Disconnected", 
+        "on-click": "cosmic-settings network"
+    },
+
+    "pulseaudio": {
+        //"format": "{volume} %",
+        //"format-muted": "{volume} %",
+        "format": " ",
+        "format-muted": " ",
+        
+        "max-volume": 100,
+        "scroll-step": 1,
+        "states": {
+            "level-zero": 0,
+            "level-low": 33,
+            "level-medium": 67,
+            "level-high": 100
+            },
+        "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
+        "on-click": "cosmic-settings sound",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "niri/language": {
+        "on-click": "niri msg action switch-layout next",
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU",
+    },
+        
+    "tray": {
+        "icon-size": 20,
+        "spacing": 30,
+        "expand": true,
+    },
+
+    "clock": {
+        //"format": "{:%a %d %b  %H:%M}",
+        "format": "{:%d %b  %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 1,
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#ffead3'><b>{}</b></span>",
+                "days":     "<span color='#ecc6d9'>{}</span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+}]

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+windows_json=$(niri msg --json windows)
+
+ghostty_windows=$(echo "$windows_json" | jq -r '.[] | select(.app_id == "ghostty" or .app_id == "com.mitchellh.ghostty" or .app_id == "Ghostty")')
+ghostty_count=$(echo "$ghostty_windows" | jq -s 'length')
+
+if [ "$ghostty_count" -eq 0 ]; then
+    ghostty
+    exit 0
+else
+    window_id=$(echo "$ghostty_windows" | jq -r '.id' | head -1)
+    niri msg action focus-window --id "$window_id"
+    exit 0
+fi

@@ -1,0 +1,28 @@
+include "binds.kdl"
+include "workspaces.kdl"
+include "rules.kdl"
+include "outputs.kdl"
+include "decorations.kdl"
+include "animations.kdl"
+include "autostart.kdl"
+include "input.kdl"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+environment {
+    QT_QPA_PLATFORMTHEME "gtk3"
+}
+
+cursor {
+    //hide-when-typing
+}

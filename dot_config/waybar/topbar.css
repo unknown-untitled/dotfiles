@@ -1,0 +1,218 @@
+.modules-left,
+.modules-center,
+.modules-right {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: transparent;
+}
+
+.modules-right > widget > *{
+    margin: 0 10px;
+    padding: 8px;
+    min-width: 22px;
+}
+
+#tray {
+    padding: 0 5px 0 5px;
+}
+
+#waybar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#window {
+    padding-left: 15px;
+}
+
+tooltip {
+    background-color: transparent;
+    border: none;
+}
+
+tooltip label {
+    background-color: rgba(15, 15, 15, 0.98);
+    color: #ffffff;
+    border-radius: 10px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    margin: 6px;
+    padding: 10px 14px;
+    font-size: 18px;
+}
+
+#language,
+#language:hover {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 600;
+}
+
+#battery,
+#battery:hover,
+#pulseaudio,
+#pulseaudio:hover,
+#network,
+#network:hover,
+#custom-settings,
+#custom-settings:hover {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 15px;
+}
+
+/*
+#battery,
+#battery:hover,
+#pulseaudio,
+#pulseaudio:hover {
+    background-position: 5px center; 
+    padding-left: 32px;
+    padding-right: 4px;
+}
+*/
+#battery,
+#battery:hover {
+    background-size: 26px;
+}
+
+#custom-settings,
+#custom-settings:hover {
+    background-image: url("/home/user/.config/waybar/icons/down.svg");
+    background-size: 16px;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-image: url("/home/user/.config/waybar/icons/bat-charging.svg");
+}
+
+#battery.level-10:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/10-bat.svg");
+}
+
+#battery.level-20:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/20-bat.svg");
+}
+
+#battery.level-30:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/30-bat.svg");
+}
+
+#battery.level-40:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/40-bat.svg");
+}
+
+#battery.level-50:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/50-bat.svg");
+}
+
+#battery.level-60:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/60-bat.svg");
+}
+
+#battery.level-70:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/70-bat.svg");
+}
+
+#battery.level-80:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/80-bat.svg");
+}
+
+#battery.level-90:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/90-bat.svg");
+}
+
+#battery:not(.charging):not(.plugged):not(.level-10):not(.level-20):not(.level-30):not(.level-40):not(.level-50):not(.level-60):not(.level-70):not(.level-80):not(.level-90) {
+    background-image: url("/home/user/.config/waybar/icons/100-bat.svg");
+}
+#pulseaudio.muted,
+#pulseaudio.level-zero {
+    background-image: url("/home/user/.config/waybar/icons/vol-mute.svg");
+}
+
+#pulseaudio.level-low:not(.muted) {
+    background-image: url("/home/user/.config/waybar/icons/vol-20.svg");
+}
+
+#pulseaudio.level-medium:not(.muted) {
+    background-image: url("/home/user/.config/waybar/icons/vol-50.svg");
+}
+
+#pulseaudio.level-high:not(.muted) {
+    background-image: url("/home/user/.config/waybar/icons/vol-100.svg");
+}
+
+#network.disconnected {
+    background-image: url("/home/user/.config/waybar/icons/wifi-off.svg");
+}
+#network.signal-33:not(.signal-66) {
+    background-image: url("/home/user/.config/waybar/icons/wifi-33.svg");
+}
+#network.signal-66:not(.signal-100) {
+    background-image: url("/home/user/.config/waybar/icons/wifi-66.svg");
+}
+#network.signal-100 {
+    background-image: url("/home/user/.config/waybar/icons/wifi-100.svg");
+}
+
+#battery.level-10.charging,
+#battery.level-10.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-10.svg");
+}
+
+#battery.level-20.charging,
+#battery.level-20.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-20.svg");
+}
+
+#battery.level-30.charging,
+#battery.level-30.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-30.svg");
+}
+
+#battery.level-40.charging,
+#battery.level-40.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-40.svg");
+}
+
+#battery.level-50.charging,
+#battery.level-50.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-50.svg");
+}
+
+#battery.level-60.charging,
+#battery.level-60.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-60.svg");
+}
+
+#battery.level-70.charging,
+#battery.level-70.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-70.svg");
+}
+
+#battery.level-80.charging,
+#battery.level-80.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-80.svg");
+}
+
+#battery.level-90.charging,
+#battery.level-90.plugged {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-90.svg");
+}
+
+#battery.charging:not(.level-10):not(.level-20):not(.level-30):not(.level-40):not(.level-50):not(.level-60):not(.level-70):not(.level-80):not(.level-90),
+#battery.plugged:not(.level-10):not(.level-20):not(.level-30):not(.level-40):not(.level-50):not(.level-60):not(.level-70):not(.level-80):not(.level-90) {
+    background-image: url("/home/user/.config/waybar/icons/battery-charging-100.svg");
+}
+#battery.level-10:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/10-bat.svg");
+}
+
+#battery.level-20:not(.charging):not(.plugged) {
+    background-image: url("/home/user/.config/waybar/icons/20-bat.svg");
+}
+

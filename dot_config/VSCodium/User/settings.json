@@ -1,0 +1,39 @@
+{
+    "editor.mouseWheelZoom": true,
+    "window.titleBarStyle": "custom",
+    "window.customTitleBarVisibility": "auto",
+    "window.title": "${rootName} - ${activeEditorShort}${dirty}",
+    "window.controlsStyle": "hidden",
+    "workbench.layoutControl.type": "menu",
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "workbench.activityBar.location": "top",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#181818",
+        "titleBar.border": "#000000",
+        "titleBar.inactiveBackground": "#141414",
+        "titleBar.activeForeground": "#d3d3d3",
+
+        "editorGroupHeader.tabsBorder": "#00000000",
+        "editorGroupHeader.border": "#111111",
+
+        "sideBar.border": "#343434",
+        "sideBarSectionHeader.border": "#00000000",
+        "tab.activeBackground": "#303030",
+        "tab.activeBorder": "#00000000",
+        "tab.activeForeground": "#d3d3d3",
+        "tab.activeBorderTop": "#71717100", 
+        "tab.inactiveBackground": "#181818",
+        "tab.border": "#494949",
+        
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+
+    
+}

@@ -1,0 +1,9 @@
+workspace "main" {
+    open-on-output "HDMI-A-1"
+}
+workspace "browser" {
+    open-on-output "HDMI-A-1"
+}
+workspace "chat"{
+    open-on-output "HDMI-A-1"
+}

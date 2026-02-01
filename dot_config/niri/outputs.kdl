@@ -1,0 +1,11 @@
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    focus-at-startup
+}
+
+output "eDP-1" {
+    mode "3072x1920@60.00"
+    //mode "3072x1920@120.002"   
+    scale 2
+    transform "normal"
+}

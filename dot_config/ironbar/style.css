@@ -1,0 +1,73 @@
+window {
+    background: transparent;
+}
+
+#bar #center {
+    background:
+        radial-gradient(ellipse 120% 100% at 20% 50%, rgba(28, 28, 28, 0.5), transparent 50%),
+        radial-gradient(ellipse 100% 150% at 60% 0%, rgba(35, 35, 35, 0.4), transparent 50%),
+        radial-gradient(ellipse 80% 120% at 85% 80%, rgba(30, 30, 30, 0.5), transparent 50%),
+        rgba(18, 18, 18, 0.75);
+    border-radius: 8px;
+    border: 1px solid #616161;
+}
+
+/* Launcher */
+.launcher,
+.launcher .item {
+    background: transparent;
+    border: none;
+}
+
+.launcher {
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.launcher .item.open,
+.launcher .item.focused,
+.launcher .item.urgent {
+    background-size: 5px 5px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.launcher .item.open {
+    background-image: radial-gradient(circle, rgba(200, 200, 200, 1) 2px, transparent 2px);
+}
+
+.launcher .item.focused {
+    background-image: radial-gradient(circle, rgba(0, 125, 254, 1) 2px, transparent 2px);
+}
+
+.launcher .item.urgent {
+    background-image: radial-gradient(circle, #ff4444 2px, transparent 2px);
+}
+
+/* Separator */
+.label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    font-weight: 200;
+    margin: 0 4px;
+    padding: 0;
+    background: transparent;
+}
+
+/* Overview button */
+#overview,
+#overview-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+#overview-btn {
+    padding-left: 10px;
+}
+
+#overview-btn:hover {
+    opacity: 0.7;
+}

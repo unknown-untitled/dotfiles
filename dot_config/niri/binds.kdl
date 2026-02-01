@@ -1,0 +1,125 @@
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    //XF86AudioRaiseVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "10%+" "--limit" "1.0"; }
+    //XF86AudioLowerVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "10%-"; }
+    //XF86AudioMute         { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    //XF86MonBrightnessUp   { spawn "brightnessctl" "set" "10%+"; }
+    //XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }
+
+    XF86AudioRaiseVolume  { spawn "swayosd-client" "--output-volume" "raise"; }
+    XF86AudioLowerVolume  { spawn "swayosd-client" "--output-volume" "lower"; }
+    XF86AudioMute         { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    XF86MonBrightnessUp   { spawn "swayosd-client" "--brightness" "raise"; }
+    XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
+
+    Mod+G hotkey-overlay-title="Open a Terminal: ghostty"           { spawn "ghostty"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel"         { spawn "fuzzel"; }
+    Mod+N hotkey-overlay-title="Open File Manager"                  { spawn "~/.local/bin/nautilus-toggle"; }
+    Mod+T hotkey-overlay-title="Open or focuse a Terminal: ghostty" { spawn "~/.local/bin/ghostty-toggle"; }
+    Mod+Shift+D hotkey-overlay-title="Toggle Ironbar" { spawn "~/.local/bin/ironbar" "bar" "dock" "toggle-visible"; }
+
+    Mod+1 hotkey-overlay-title="Ghostty"       { spawn "~/.local/bin/app-toggle" "com.mitchellh.ghostty" "ghostty"; }
+    Mod+2 hotkey-overlay-title="Telegram"      { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "Telegram"; }
+    Mod+3 hotkey-overlay-title="Firefox"       { spawn "~/.local/bin/app-toggle" "org.mozilla.firefox" "firefox"; }
+    Mod+4 hotkey-overlay-title="GoLand"        { spawn "~/.local/bin/app-toggle" "codium" "codium"; }
+    Mod+5 hotkey-overlay-title="Sublime Text"  { spawn "subl"; }
+    Mod+6 hotkey-overlay-title="Nautilus"      { spawn "nautilus"; }
+    Mod+7 hotkey-overlay-title="Obsidian"      { spawn "~/.local/bin/app-toggle" "obsidian" "flatpak run md.obsidian.Obsidian"; }
+    Mod+8 hotkey-overlay-title="Discord"       { spawn "~/.local/bin/app-toggle" "discord" "Discord"; }
+
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock"    { spawn "swaylock"; }
+
+    Mod+W repeat=false hotkey-overlay-title="Overview" { toggle-overview; }
+    
+    Mod+Q { close-window; }
+
+    Mod+Left       { focus-column-left; }
+    Mod+Right      { focus-column-right; }
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+Down  { move-window-down-or-to-workspace-down; }
+    Mod+Ctrl+Up    { move-window-up-or-to-workspace-up; }    
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Down           { focus-workspace-down; }
+    Mod+Up             { focus-workspace-up; }
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+WheelScrollRight                     { focus-column-right; }
+    Mod+WheelScrollLeft                      { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight                { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft                 { move-column-left; }
+    Mod+Shift+WheelScrollDown                { focus-column-right; }
+    Mod+Shift+WheelScrollUp                  { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown           { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp             { move-column-left; }
+    
+    Mod+Shift+1 { focus-workspace 1; }
+    Mod+Shift+2 { focus-workspace 2; }
+    Mod+Shift+3 { focus-workspace 3; }
+    Mod+Shift+4 { focus-workspace 4; }
+    Mod+Shift+5 { focus-workspace 5; }
+    Mod+Shift+6 { focus-workspace 6; }
+    Mod+Shift+7 { focus-workspace 7; }
+    Mod+Shift+8 { focus-workspace 8; }
+    Mod+Shift+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+    Mod+Tab { focus-workspace-previous; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma        { consume-window-into-column; }
+    Mod+Period       { expel-window-from-column; }
+
+    Mod+R       { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R  { reset-window-height; }
+
+    Mod+F       { maximize-column; }
+    Mod+Ctrl+F  { maximize-window-to-edges; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+C       { center-column; }    
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+Minus       { set-column-width "-10%"; }
+    Mod+Equal       { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Print      { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print  { screenshot-window; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+E     { quit; }
+    Ctrl+Alt+Delete { quit; }
+    //Mod+Shift+P   { power-off-monitors; }
+    Mod+P           { spawn "niri" "msg" "output" "eDP-1" "off"; }
+    Mod+Shift+P     { spawn "niri" "msg" "output" "eDP-1" "on"; }
+}

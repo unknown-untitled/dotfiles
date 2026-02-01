@@ -1,0 +1,68 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "layer-shell-cover-screen": false,
+  "cssPriority": "user",
+  "control-center-margin-top": 2,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 2,
+  "control-center-margin-left": 0,
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "notification-body-image-height": 50,
+  "notification-body-image-width": 100,
+  "notification-icon-size": 48,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 10,
+  "fit-to-screen": false,
+  "relative-timestamps": true,
+  "control-center-width": 350,
+  "control-center-height": 500,
+  "notification-window-width": 350,
+  "keyboard-shortcuts": true,
+  "notification-grouping": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "text-empty": "",
+  "script-fail-notify": true,
+  "widgets": [
+    "dnd",
+    "volume",
+    "backlight#screen",
+    "backlight#kbd",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "volume": {
+      "label": "󰕾",
+      "show-per-app": false
+    },
+    "backlight#screen": {
+      "label": "󰃟",
+      "device": "amdgpu_bl1"
+    },
+    "backlight#kbd": {
+      "label": "󰌌",
+      "device": "platform::kbd_backlight",
+      "subsystem": "leds"
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "notifications": {
+      "vexpand": false
+    }
+  }
+}

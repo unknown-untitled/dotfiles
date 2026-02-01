@@ -1,0 +1,13 @@
+#!/bin/bash
+# ~/.local/bin/app-toggle
+
+app_id="$1"
+launch_cmd="$2"
+
+windows_json=$(niri msg --json windows)
+if echo "$windows_json" | jq -e ".[] | select(.app_id == \"$app_id\")" > /dev/null; then
+    window_id=$(echo "$windows_json" | jq -r ".[] | select(.app_id == \"$app_id\") | .id" | head -1)
+    niri msg action focus-window --id "$window_id"
+else
+    $launch_cmd &
+fi

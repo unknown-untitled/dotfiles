@@ -1,0 +1,60 @@
+stasis:
+  pre_suspend_command "swaylock"
+  lid_close_action "suspend"
+  lid_open_action "wake"
+  monitor_media true 
+  ignore_remote_media true
+  respect_idle_inhibitors true
+  
+  inhibit_apps [
+    "vlc"
+    "mpv"
+    r"steam_app_.*"
+  ]
+  
+  on_ac:
+    brightness:
+      timeout 300
+      command "brightnessctl set 50%"
+    end
+    
+    dpms:
+      timeout 120
+      command "niri msg action power-off-monitors"
+      resume-command "niri msg action power-on-monitors"
+    end
+    
+    lock_screen:
+      timeout 180
+      command "swaylock"
+    end
+    
+    suspend:
+      timeout 600
+      command "systemctl suspend"
+    end
+  end
+  
+  on_battery:
+    brightness:
+      timeout 180
+      command "brightnessctl set 10% && brightnessctl --device='platform::kbd_backlight' set 0%"
+    end
+    
+    dpms:
+      timeout 180
+      command "niri msg action power-off-monitors"
+      resume-command "niri msg action power-on-monitors"
+    end
+    
+    lock_screen:
+      timeout 180
+      command "swaylock"
+    end
+    
+    suspend:
+      timeout 240
+      command "systemctl suspend"
+    end
+  end
+end

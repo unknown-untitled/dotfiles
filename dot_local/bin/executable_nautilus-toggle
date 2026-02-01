@@ -1,0 +1,11 @@
+#!/bin/bash
+
+current_workspace=$(niri msg -j workspaces | jq '.[] | select(.is_focused == true) | .id')
+
+window_id=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"org.gnome.Nautilus\" and .workspace_id == $current_workspace) | .id" | head -n1)
+
+if [ -z "$window_id" ]; then
+    nautilus --new-window &
+else
+    niri msg action focus-window --id "$window_id"
+fi

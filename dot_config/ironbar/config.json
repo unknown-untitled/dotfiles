@@ -1,0 +1,42 @@
+{
+  "name": "dock",
+  "height": 52,
+  "position": "bottom",
+  "margin.top": 0,
+  "margin.bottom": 5,
+  "icon_theme": "Morewaita",
+  "center": [
+    {
+      "type": "launcher",
+      "icon_size": 32,
+      "favorites": [
+        "com.mitchellh.ghostty",
+        "org.telegram.desktop",
+        "org.mozilla.firefox",
+        "codium",
+        "sublime_text",
+        "org.gnome.Nautilus",
+        "md.obsidian.Obsidian",
+        "discord",
+        "v2rayN",
+        "org.gnome.Calendar",
+        "com.system76.CosmicSettings",
+        "io.missioncenter.MissionCenter"
+      ]
+    },
+    {
+      "type": "label",
+      "label": "|"
+    },
+    {
+      "type": "custom",
+      "name": "overview",
+      "bar": [{
+          "type": "button",
+          "name": "overview-btn",
+          "label": "\udb84\udcac",
+          "on_click": "!niri msg action toggle-overview"
+          }]
+    }
+  ]
+}

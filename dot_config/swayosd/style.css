@@ -1,0 +1,19 @@
+window#osd {
+    border-radius: 12px;
+    outline: 1px solid rgba(99, 99, 99, 0.8);
+    outline-offset: -2px;
+    background: rgba(45, 45, 45, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+}  
+window#osd #container {
+  margin: 8px;
+  padding: 4px;
+  background: transparent;
+}
+window#osd image {
+  -gtk-icon-transform: scale(0.7);
+}
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}

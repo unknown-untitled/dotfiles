@@ -1,0 +1,42 @@
+prefer-no-csd
+
+layout {
+    background-color "#35354000"
+    always-center-single-column
+    default-column-width { proportion 0.5; }
+    default-column-display "tabbed"
+
+    tab-indicator {
+        off   
+    }
+
+    gaps 12
+    struts {
+        left -5
+        right -5
+        top -5
+        bottom -5 
+    }
+}
+
+recent-windows {
+    debounce-ms 750
+    open-delay-ms 165
+    highlight {
+        active-color "606060"
+        padding 5
+        corner-radius 6
+    }
+    previews {
+        max-height 120
+        max-scale 1
+    }
+}
+
+overview {
+    zoom 0.25
+    backdrop-color "353540"
+    workspace-shadow {
+        off
+    }
+}

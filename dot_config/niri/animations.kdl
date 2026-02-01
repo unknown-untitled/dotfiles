@@ -1,0 +1,15 @@
+animations {
+    slowdown 0.7
+    workspace-switch {
+        curve "ease-out-expo"
+        duration-ms 200
+    }
+    window-open {
+        curve "ease-out-expo"
+        duration-ms 500
+    }
+    window-close {
+        curve "ease-out-expo"
+        duration-ms 500
+    }
+}

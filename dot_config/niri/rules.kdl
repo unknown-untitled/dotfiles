@@ -1,0 +1,199 @@
+window-rule {
+    geometry-corner-radius 15
+    clip-to-geometry true
+    open-focused true
+}
+
+window-rule {
+    match is-focused=true
+    //shadow
+    focus-ring { 
+        on
+        width 0.5
+        active-color "#000"
+    }
+    border {
+        on
+        width 1
+        active-color "#585858"
+        //active-gradient from="#738696" to="#8993a0"
+        //active-gradient from="#616161" to="#888888" angle=300
+    }
+
+    shadow {
+        on
+        softness 40
+        spread 22
+        color "#00000079"
+        offset x=0 y=8
+    }
+    
+}
+
+window-rule {
+    match is-focused=false
+    
+    focus-ring {
+        off
+    }
+    shadow {
+        on
+        softness 0
+        spread 1
+        color "#000000FF"
+        offset x=0 y=0
+    }
+    border {
+        on
+        width 1
+        active-color "#383838"
+        inactive-color "#383838"
+    }
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^org\.gnome\.Calculator$"#
+    match app-id=r#"^org\.gnome\.Calendar$"#
+    match app-id=r#"^org\.gnome\.clocks$"#
+    match app-id=r#"^org\.gnome\.Contacts$"#
+    match app-id=r#"^org\.gnome\.TextEditor$"#
+    match app-id=r#"^org\.gnome\.Loupe$"#
+    match app-id=r#"^org\.gnome\.Weather$"#
+    match app-id=r#"^org\.gnome\.Maps$"#
+    match app-id=r#"^org\.gnome\.Music$"#
+    match app-id=r#"^org\.gnome\.Settings$"#
+    match app-id=r#"^org\.gnome\.Software$"#
+    match app-id=r#"^org\.gnome\.Console$"#
+    match app-id=r#"^org\.gnome\.baobab$"#
+    match app-id=r#"^org\.gnome\.DiskUtility$"#
+    match app-id=r#"^org\.gnome\.Logs$"#
+    match app-id=r#"^org\.gnome\.SystemMonitor$"#
+    match app-id=r#"^org\.gnome\.Characters$"#
+    match app-id=r#"^org\.gnome\.Connections$"#
+    match app-id=r#"^org\.gnome\.Extensions$"#
+    match app-id=r#"^org\.gnome\.Evince$"#
+    match app-id=r#"^org\.gnome\.font-viewer$"#
+    match app-id=r#"^org\.gnome\.NautilusPreviewer$"#
+    match app-id=r#"^org\.gnome\.Snapshot$"#
+    match app-id=r#"^org\.gnome\.Showtime$"#
+    match app-id=r#"^io\.missioncenter\.MissionCenter$"#
+    match app-id=r#"^org\.gnome\.gitlab\.YaLTeR\.VideoTrimmer$"#
+    match app-id=r#"^de\.haeckerfelix\.Tuner$"#
+    match app-id=r#"^org\.gnome\.Solanum$"#
+    match app-id=r#"^io\.github\.celluloid_player\.Celluloid$"#
+    match app-id=r#"^org\.gnome\.Totem$"#
+    match app-id=r#"^com\.mitchellh\.ghostty$"#
+    match app-id=r#"^io.github.diegopvlk.Cine"#
+    
+    border {
+        off
+    }
+}
+
+
+window-rule {
+    match title="Firefox"
+    open-on-workspace "browser"
+}
+
+window-rule {
+    match title="Ghostty"
+    match title="Sublime Text"
+    open-on-workspace "main"
+}
+
+window-rule {
+    match title="Telegram"
+    match title="Discord"
+    open-on-workspace "chat"
+    default-column-width { proportion 0.8; }
+}
+
+window-rule {
+    match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    open-fullscreen false
+}
+
+window-rule {
+    open-floating true
+
+    match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    match app-id="org.gnome.clocks"
+    match app-id=r#"^firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"^AmneziaVPN$"#
+    match app-id=r#"^org\.gnome\.Calculator"#
+    match app-id=r#"^org\.gnome\.gitlab\.YaLTeR\.VideoTrimmer"#
+    match app-id=r#"^org\.gnome\.NautilusPreviewer$"#
+    match app-id=r#"^org\.gnome\.Showtime$"#
+    match app-id="pavucontrol"    
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^io\.missioncenter\.MissionCenter$"#
+}
+
+window-rule {
+    default-column-width { proportion 0.1; }
+    default-window-height { proportion 0.1; }
+
+    match app-id="org.gnome.clocks"
+    match app-id=r#"^AmneziaVPN$"#
+    match app-id=r#"^org\.gnome\.Calculator"#
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    default-column-width { proportion 0.57; }
+    default-window-height { proportion 0.7; }
+}
+
+window-rule {
+    match app-id=r#"^io\.missioncenter\.MissionCenter$"#
+    default-window-height { proportion 0.75; }
+    default-column-width { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="Alacritty"
+
+    open-floating true
+    default-window-height { proportion 0.5; }
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+    open-on-workspace "main"
+}
+
+layer-rule {
+    match namespace="waybar"
+    shadow {
+        off
+        softness 4
+        spread 1
+        color "#00000090" 
+        offset x=0 y=1
+    }
+}
+
+layer-rule {
+    match namespace="swaync-control-center"
+    match namespace="^launcher$"
+
+    shadow {
+        on
+        softness 50
+        spread 10
+        color "#00000090" 
+        offset x=10 y=10
+    }
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+

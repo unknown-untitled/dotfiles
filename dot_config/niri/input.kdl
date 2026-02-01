@@ -1,0 +1,14 @@
+input {
+    disable-power-key-handling
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+        accel-speed 0.1
+    }
+}
