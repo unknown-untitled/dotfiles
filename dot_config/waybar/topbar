@@ -7,13 +7,22 @@
     "modules-center": ["clock"],
     "modules-right": [
         "tray",
+        "custom/docker",
         "niri/language",
         "privacy",
         "network",
         "pulseaudio",
         "battery",
-        "custom/settings",
+        "custom/settings"
         ],
+    
+    "custom/docker": {
+        "exec": "~/.config/waybar/scripts/docker-toggle.sh",
+        "return-type": "json",
+        "interval": 60,
+        "on-click": "~/.config/waybar/scripts/docker-toggle.sh toggle",
+        "format": "{}"
+    },
 
     "custom/settings": {
         "format": " ",

@@ -4,13 +4,17 @@ window-padding-y = 5
 background = #181818
 resize-overlay-duration = 1s 200ms
 window-subtitle = working-directory
+
+gtk-custom-css = ./style.css
+
 shell-integration = detect
 shell-integration-features = title, cursor, sudo
 window-inherit-working-directory = false
 window-decoration = true
-gtk-titlebar=true
-gtk-titlebar-style=tabs
-gtk-wide-tabs=false
-gtk-toolbar-style=raised
-gtk-custom-css=./style.css
-gtk-tabs-location=hidden
+
+gtk-titlebar = true
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+gtk-toolbar-style = raised
+
+gtk-tabs-location = hidden

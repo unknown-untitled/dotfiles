@@ -64,6 +64,18 @@ tooltip label {
     font-size: 15px;
 }
 
+#custom-docker {
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-docker.inactive {
+    opacity: 0.5;
+}
+
 /*
 #battery,
 #battery:hover,
@@ -216,3 +228,6 @@ tooltip label {
     background-image: url("/home/user/.config/waybar/icons/20-bat.svg");
 }
 
+#custom-docker {
+    background-image: url("/home/user/.config/waybar/icons/docker.svg");
+}

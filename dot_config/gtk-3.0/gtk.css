@@ -6,7 +6,7 @@
 @define-color accent_color @accent_bg_color;
 @define-color headerbar_bg_color #262626;
 @define-color headerbar_fg_color @window_fg_color;
-@define-color headerbar_backdrop_color #282828;
+@define-color headerbar_backdrop_color #232323;
 @define-color popover_bg_color #282828;
 @define-color popover_fg_color @window_fg_color;
 @define-color popover_border_color #595959;
@@ -22,27 +22,29 @@
 
 
 headerbar.titlebar {
-    min-height: 36px;
+    min-height: 38px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: none;
 }
 .titlebutton {
-    background-color: #525252;
+    background-color: #464646;
 }
 .titlebutton:hover {
-    background-color: #717171;
+    background-color: #545454;
 }
 .titlebutton:backdrop {
-    background-color: #343434;
+    background-color: #323232;
 }
 .titlebutton:backdrop:hover {
-    background-color: #525252;
+    background-color: #3b3b3b;
 }
 
 popover,
 menu {
-    background-color: @popover_bg_color;
     border: 1px solid @popover_border_color;
+    background:
+        radial-gradient(circle at top left, rgba(111, 131, 150, 0.15), transparent 70%),
+        #262626;
 }
 
 popover {
@@ -55,11 +57,10 @@ popover {
     box-shadow: none;
 }
 
-.titlebutton {
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
     min-width: 22px;
     min-height: 22px;
+    margin: 0 3px;
 }   
 
-.titlebutton {
-    margin: 0 3px;
-}

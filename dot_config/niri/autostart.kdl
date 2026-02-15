@@ -3,3 +3,5 @@ spawn-at-startup "sh" "-c" "swaybg -i ~/.config/wallpapers/dex-ezekiel-PakmF-MEo
 spawn-at-startup "swayosd-server"
 spawn-at-startup "swaync"
 spawn-at-startup "sh" "-c" "~/.local/bin/ironbar"
+spawn-at-startup "~/.cargo/bin/wl-clip-persist" "--clipboard" "regular"
+spawn-at-startup "vicinae" "server"

@@ -4,11 +4,9 @@ window {
 
 #bar #center {
     background:
-        radial-gradient(ellipse 120% 100% at 20% 50%, rgba(28, 28, 28, 0.5), transparent 50%),
-        radial-gradient(ellipse 100% 150% at 60% 0%, rgba(35, 35, 35, 0.4), transparent 50%),
-        radial-gradient(ellipse 80% 120% at 85% 80%, rgba(30, 30, 30, 0.5), transparent 50%),
-        rgba(18, 18, 18, 0.75);
-    border-radius: 8px;
+        radial-gradient(circle at top left, rgba(20, 30, 18, 0.5), transparent 60%),
+        rgba(10, 13, 9, 0.95);
+    border-radius: 12px;
     border: 1px solid #616161;
 }
 
@@ -28,7 +26,7 @@ window {
 .launcher .item.open,
 .launcher .item.focused,
 .launcher .item.urgent {
-    background-size: 5px 5px;
+    background-size: 5px 4px;
     background-position: center bottom;
     background-repeat: no-repeat;
 }
@@ -47,9 +45,9 @@ window {
 
 /* Separator */
 .label {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 28px;
-    font-weight: 200;
+    font-weight: 150;
     margin: 0 4px;
     padding: 0;
     background: transparent;
@@ -71,3 +69,4 @@ window {
 #overview-btn:hover {
     opacity: 0.7;
 }
+

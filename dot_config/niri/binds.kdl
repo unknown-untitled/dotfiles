@@ -14,7 +14,8 @@ binds {
     XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
 
     Mod+G hotkey-overlay-title="Open a Terminal: ghostty"           { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel"         { spawn "fuzzel"; }
+    //Mod+D hotkey-overlay-title="Run an Application: fuzzel"         { spawn "fuzzel"; }
+    Mod+D hotkey-overlay-title="Run an Application: vicinae"        { spawn "vicinae" "toggle"; }
     Mod+N hotkey-overlay-title="Open File Manager"                  { spawn "~/.local/bin/nautilus-toggle"; }
     Mod+T hotkey-overlay-title="Open or focuse a Terminal: ghostty" { spawn "~/.local/bin/ghostty-toggle"; }
     Mod+Shift+D hotkey-overlay-title="Toggle Ironbar" { spawn "~/.local/bin/ironbar" "bar" "dock" "toggle-visible"; }
