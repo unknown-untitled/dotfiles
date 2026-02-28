@@ -93,6 +93,7 @@ placessidebar separator {
     padding: 0;
     border: none;
 }
+
 /*
 placessidebar row:nth-child(4),
 placessidebar row:nth-child(5) {
@@ -107,7 +108,3 @@ placessidebar row:nth-child(5) {
     border: none;
 }
 */
-.nautilus-window headerbar .title {
-    font-size: 0;
-}
-

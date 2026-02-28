@@ -32,7 +32,7 @@
 
     "niri/window": {
         "separate-outputs": true,
-        "format": "{title}",
+        "format": "  {title}",
         "icon": true,
         "icon-size": 20,
         "rewrite": {

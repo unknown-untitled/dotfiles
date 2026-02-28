@@ -29,6 +29,7 @@
       }
    },
    "favorites": [
+      "applications:v2rayn",
       "applications:com.mitchellh.ghostty",
       "applications:org.telegram",
       "applications:org.mozilla.firefox",
@@ -40,6 +41,17 @@
       },
       "calculator": {
          "enabled": false
+      },
+      "clipboard": {
+         "preferences": {
+            "eraseOnStartup": true,
+            "monitoring": true
+         },
+         "entrypoints": {
+            "clear": {
+               "enabled": false
+            }
+         }
       },
       "core": {
          "entrypoints": {

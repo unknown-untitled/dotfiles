@@ -1,4 +1,4 @@
-stasis:
+default:
   pre_suspend_command "swaylock"
   lid_close_action "suspend"
   lid_open_action "wake"

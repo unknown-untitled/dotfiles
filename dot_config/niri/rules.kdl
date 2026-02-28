@@ -43,6 +43,7 @@ window-rule {
         color "#000000FF"
         offset x=0 y=0
     }
+
     border {
         on
         width 1
@@ -97,23 +98,13 @@ window-rule {
     }
 }
 
-
-window-rule {
-    match title="Firefox"
-    open-on-workspace "browser"
-}
-
-window-rule {
-    match title="Ghostty"
-    match title="Sublime Text"
-    open-on-workspace "main"
-}
-
 window-rule {
     match title="Telegram"
     match title="Discord"
-    open-on-workspace "chat"
+    match title="v2rayN"
+
     default-column-width { proportion 0.8; }
+
 }
 
 window-rule {
@@ -132,8 +123,9 @@ window-rule {
     match app-id=r#"^org\.gnome\.gitlab\.YaLTeR\.VideoTrimmer"#
     match app-id=r#"^org\.gnome\.NautilusPreviewer$"#
     match app-id=r#"^org\.gnome\.Showtime$"#
+    match app-id=r#"^org\.gnome\.Calendar$"#
     match app-id="pavucontrol"    
-    match app-id=r#"^org\.gnome\.Nautilus$"#
+    //match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^io\.missioncenter\.MissionCenter$"#
 }
 
@@ -147,6 +139,7 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^org\.gnome\.Calendar$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
     default-column-width { proportion 0.57; }
     default-window-height { proportion 0.7; }
@@ -170,7 +163,6 @@ window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     block-out-from "screen-capture"
-    open-on-workspace "main"
 }
 
 layer-rule {
@@ -201,5 +193,3 @@ layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
-
-
