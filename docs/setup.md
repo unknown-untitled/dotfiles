@@ -1,0 +1,1 @@
+user ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop docker, /usr/bin/systemctl stop docker.socket, /usr/bin/systemctl stop containerd, /usr/bin/systemctl start docker, /usr/bin/systemctl start docker.socket, /usr/bin/ip link delete *
