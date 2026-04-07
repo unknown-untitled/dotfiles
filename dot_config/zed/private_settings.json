@@ -1,0 +1,24 @@
+{
+  "window_decorations": "server",
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "tabs": {
+    "git_status": true,
+  },
+  "project_panel": {
+    "button": true,
+  },
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": true,
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_user_picture": false,
+  },
+  "ui_font_size": 18.0,
+  "buffer_font_size": 15,
+  "theme": "VSCode Dark Modern",
+  "experimental.theme_overrides": {
+    "border": "#282828",
+    "border.variant": "#363636",
+  },
+}

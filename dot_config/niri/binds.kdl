@@ -21,9 +21,11 @@ binds {
     Mod+Shift+D hotkey-overlay-title="Toggle Ironbar" { spawn "~/.local/bin/ironbar" "bar" "dock" "toggle-visible"; }
 
     Mod+1 hotkey-overlay-title="Ghostty"       { spawn "~/.local/bin/app-toggle" "com.mitchellh.ghostty" "ghostty"; }
-    Mod+2 hotkey-overlay-title="Telegram"      { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "Telegram"; }
+    Mod+2 hotkey-overlay-title="Zed"           { spawn "~/.local/bin/app-toggle" "dev.zed.Zed" "zed"; }
     Mod+3 hotkey-overlay-title="Firefox"       { spawn "~/.local/bin/app-toggle" "org.mozilla.firefox" "firefox"; }
-    Mod+4 hotkey-overlay-title="GoLand"        { spawn "~/.local/bin/app-toggle" "codium" "codium"; }
+    //Mod+4 hotkey-overlay-title="Telegram"    { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "Telegram"; }
+    Mod+4 hotkey-overlay-title="Telegram"      { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "flatpak run org.telegram.desktop"; }
+    //Mod+4 hotkey-overlay-title="Codium"        { spawn "~/.local/bin/app-toggle" "codium" "codium"; }
     Mod+5 hotkey-overlay-title="Sublime Text"  { spawn "subl"; }
     Mod+6 hotkey-overlay-title="Nautilus"      { spawn "nautilus"; }
     Mod+7 hotkey-overlay-title="Obsidian"      { spawn "~/.local/bin/app-toggle" "obsidian" "flatpak run md.obsidian.Obsidian"; }

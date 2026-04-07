@@ -41,10 +41,8 @@ headerbar.titlebar {
 
 popover,
 menu {
-    border: 1px solid @popover_border_color;
-    background:
-        radial-gradient(circle at top left, rgba(111, 131, 150, 0.15), transparent 70%),
-        #262626;
+    border: 1px solid #494949;
+    background: #282828;
 }
 
 popover {

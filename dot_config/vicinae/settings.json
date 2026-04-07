@@ -18,7 +18,7 @@
    },
    "theme": {
       "dark": {
-         "name": "catppuccin-mocha",
+         "name": "one-dark",
          "icon_theme": "MoreWaita"
       }
    },
@@ -121,6 +121,9 @@
       "system": {
          "enabled": false,
          "entrypoints": {
+            "browse-apps": {
+               "enabled": true
+            },
             "run": {
                "enabled": true
             }

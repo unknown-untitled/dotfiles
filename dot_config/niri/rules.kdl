@@ -1,5 +1,5 @@
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 10
     clip-to-geometry true
     open-focused true
 }
@@ -15,7 +15,7 @@ window-rule {
     border {
         on
         width 1
-        active-color "#585858"
+        active-color "#505050"
         //active-gradient from="#738696" to="#8993a0"
         //active-gradient from="#616161" to="#888888" angle=300
     }
@@ -47,8 +47,8 @@ window-rule {
     border {
         on
         width 1
-        active-color "#383838"
-        inactive-color "#383838"
+        active-color "#343434"
+        inactive-color "#343434"
     }
 }
 
@@ -75,7 +75,7 @@ window-rule {
     match app-id=r#"^org\.gnome\.Extensions$"#
     match app-id=r#"^org\.gnome\.Evince$"#
     match app-id=r#"^org\.gnome\.font-viewer$"#
-    match app-id=r#"^org\.gnome\.NautilusPreviewer$"#
+    //match app-id=r#"^org\.gnome\.NautilusPreviewer$"#
     match app-id=r#"^org\.gnome\.Snapshot$"#
     match app-id=r#"^org\.gnome\.Showtime$"#
     match app-id=r#"^io\.missioncenter\.MissionCenter$"#
@@ -93,9 +93,26 @@ window-rule {
     match app-id=r#"^com\.quexten\.Goldwarden.*$"#
     match app-id=r#"^com.system76.CosmicSettings"#
     match app-id=r#"^com\.github\.PintaProject\.Pinta$"#
+    match app-id=r#"^org\.scratchmark\.Scratchmark"#
+    match app-id=r#"^org.gnome.gitlab.somas.Apostrophe"#
+    //match app-id=r#"^dev\.zed\.Zed$"#
+
     border {
         off
     }
+}
+
+window-rule {
+    match title="Chromium"
+    geometry-corner-radius 14
+}
+window-rule {
+    match app-id="dev.zed.Zed"
+    geometry-corner-radius 10
+}
+window-rule {
+    match app-id=r#"^com.system76.CosmicSettings"#
+    geometry-corner-radius 12
 }
 
 window-rule {

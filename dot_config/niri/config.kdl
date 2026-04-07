@@ -26,3 +26,12 @@ environment {
 cursor {
     //hide-when-typing
 }
+
+overview {
+    zoom 0.2
+    backdrop-color "353540"
+    workspace-shadow {
+        off
+    }
+}
+

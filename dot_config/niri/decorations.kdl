@@ -2,12 +2,17 @@ prefer-no-csd
 
 layout {
     background-color "#35354000"
+    center-focused-column "always"
     always-center-single-column
     default-column-width { proportion 0.5; }
     default-column-display "tabbed"
-
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.9
+    }
     tab-indicator {
-        off   
+        off
     }
 
     gaps 12
@@ -33,10 +38,3 @@ recent-windows {
     }
 }
 
-overview {
-    zoom 0.25
-    backdrop-color "353540"
-    workspace-shadow {
-        off
-    }
-}

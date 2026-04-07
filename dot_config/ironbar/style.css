@@ -3,11 +3,11 @@ window {
 }
 
 #bar #center {
-    background:
-        radial-gradient(circle at top left, rgba(20, 30, 18, 0.5), transparent 60%),
-        rgba(10, 13, 9, 0.95);
+    background-color: rgba(23, 23, 23, 0.9);
     border-radius: 12px;
-    border: 1px solid #616161;
+    border: 1px solid rgba(0, 0, 0, 1);
+    outline: 1px solid rgba(255, 255, 255, 0.26);
+    outline-offset: -2px;
 }
 
 /* Launcher */

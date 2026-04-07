@@ -55,13 +55,22 @@ tooltip label {
 #network,
 #network:hover,
 #custom-settings,
-#custom-settings:hover {
+#custom-settings:hover,
+#bluetooth,
+#bluetooth:hover {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
     padding-left: 4px;
     padding-right: 4px;
     font-size: 15px;
+}
+
+#bluetooth,
+#bluetooth:hover {
+    background-size: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #custom-docker {
@@ -230,4 +239,9 @@ tooltip label {
 
 #custom-docker {
     background-image: url("/home/user/.config/waybar/icons/docker.svg");
+}
+
+#bluetooth,
+#bluetooth:hover {
+    background-image: url("/home/user/.config/waybar/icons/bluetooth.svg");
 }

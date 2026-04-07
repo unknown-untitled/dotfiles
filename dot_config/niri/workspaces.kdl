@@ -26,7 +26,7 @@ window-rule {
 }
 
 window-rule {
-    match title="Telegram"
+    match app-id="org.telegram.desktop"
     match title="Discord"
     open-on-workspace "chat"
 }

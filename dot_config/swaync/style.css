@@ -1,7 +1,7 @@
 :root {
   --cc-bg: #282828;
   --noti-border-color: rgba(113, 113, 113, 1);
-  --noti-bg: 54, 54, 54;
+  --noti-bg: 44, 44, 44;
   --noti-bg-alpha: 1;
   --noti-bg-darker: rgb(38, 38, 38);
   --noti-bg-hover: rgb(48, 48, 48);
@@ -23,7 +23,7 @@
 }
 
 @define-color cc-bg #282828;
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
+@define-color noti-border-color rgba(140, 140, 140, 1);
 @define-color noti-bg rgb(48, 48, 48);
 @define-color noti-bg-darker rgb(38, 38, 38);
 @define-color noti-bg-hover rgb(48, 48, 48);
@@ -37,7 +37,9 @@
 .control-center {
   background: var(--cc-bg);
   color: var(--text-color);
-  border: 1px solid #585656;
+  border: 1px solid #000;
+  outline: 1px solid rgba(255, 255, 255, 0.26);
+  outline-offset: -2px;
   border-radius: var(--border-radius);
 }
 
@@ -285,4 +287,10 @@ notificationwindow, blankwindow {
 
 .floating-notifications .notification-row .notification-background .notification .notification-default-action:hover {
   background: transparent;
+}
+
+.floating-notifications .notification-row .notification-background .notification {
+  outline: 1px solid rgba(254, 255, 255, 0.26);
+  outline-offset: -2px;
+  border: 1px solid #000;
 }
