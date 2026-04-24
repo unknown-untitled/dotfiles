@@ -31,7 +31,7 @@ binds {
     Mod+7 hotkey-overlay-title="Obsidian"      { spawn "~/.local/bin/app-toggle" "obsidian" "flatpak run md.obsidian.Obsidian"; }
     Mod+8 hotkey-overlay-title="Discord"       { spawn "~/.local/bin/app-toggle" "discord" "Discord"; }
 
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock"    { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock"    { spawn "veila" "lock"; }
 
     Mod+W repeat=false hotkey-overlay-title="Overview" { toggle-overview; }
     

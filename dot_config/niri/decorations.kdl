@@ -4,7 +4,7 @@ layout {
     background-color "#35354000"
     center-focused-column "always"
     always-center-single-column
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.9; }
     default-column-display "tabbed"
     preset-column-widths {
         proportion 0.33333
@@ -17,8 +17,8 @@ layout {
 
     gaps 12
     struts {
-        left -5
-        right -5
+        left 0
+        right 0
         top -5
         bottom -5 
     }

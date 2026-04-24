@@ -1,6 +1,6 @@
 default:
-  pre_suspend_command "swaylock -f"
-  lid_close_action "suspend"
+  pre_suspend_command "veila lock"
+  lid_close_action "veila lock && systemctl suspend"
   lid_open_action ""
   monitor_media true
   ignore_remote_media true
@@ -14,19 +14,20 @@ default:
 
   ac:
     brightness:
-      timeout 300
-      command "brightnessctl set 50%"
-    end
-
-    dpms:
       timeout 120
-      command "niri msg action power-off-monitors"
-      resume_command "niri msg action power-on-monitors"
+      command "brightnessctl get > /tmp/brightness_saved && brightnessctl --device='platform::kbd_backlight' get > /tmp/kbd_brightness_saved && brightnessctl set 5% && brightnessctl --device='platform::kbd_backlight' set 0%"
+      resume_command "brightnessctl set $(cat /tmp/brightness_saved) && brightnessctl --device='platform::kbd_backlight' set $(cat /tmp/kbd_brightness_saved)"
     end
 
     lock_screen:
       timeout 180
-      command "swaylock"
+      command "veila lock"
+    end
+
+    dpms:
+      timeout 300
+      command "niri msg action power-off-monitors"
+      resume_command "niri msg action power-on-monitors"
     end
 
     suspend:
@@ -37,23 +38,25 @@ default:
 
   battery:
     brightness:
-      timeout 180
-      command "brightnessctl set 10% && brightnessctl --device='platform::kbd_backlight' set 0%"
+      timeout 60
+      command "brightnessctl get > /tmp/brightness_saved && brightnessctl --device='platform::kbd_backlight' get > /tmp/kbd_brightness_saved && brightnessctl set 10% && brightnessctl --device='platform::kbd_backlight' set 0%"
+
+      resume_command "brightnessctl set $(cat /tmp/brightness_saved) && brightnessctl --device='platform::kbd_backlight' set $(cat /tmp/kbd_brightness_saved)"
     end
 
     dpms:
-      timeout 180
+      timeout 60
       command "niri msg action power-off-monitors"
       resume_command "niri msg action power-on-monitors"
     end
 
     lock_screen:
       timeout 180
-      command "swaylock"
+      command "veila lock"
     end
 
     suspend:
-      timeout 240
+      timeout 200
       command "systemctl suspend"
     end
   end

@@ -1,0 +1,4 @@
+image=/home/user/.config/wallpapers/lock.png
+show-failed-attempts
+//indicator-idle-visible
+ignore-empty-password

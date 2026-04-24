@@ -18,10 +18,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="dev.zed.Zed"
     match app-id="com.mitchellh.ghostty"
     match app-id="sublime_text"
     match app-id="codium"
     match app-id="dev.zed.Zed"
+
     open-on-workspace "main"
 }
 

@@ -27,7 +27,7 @@
         "tooltip-format": "Bluetooth {status}",
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias} — {device_battery_percentage}%",
-        "on-click": "~/.local/bin/app-toggle com.system76.CosmicSettings \"cosmic-settings bluetooth\""
+        "on-click": "blueman-manager"
 
     },
     
@@ -107,7 +107,6 @@
         //"format-plugged": "{capacity} %",
         
         "tooltip-format": "Capacity: {capacity}%\nTime: {time}\nPower: {power:.1f}W",
-        "on-click": "~/.local/bin/app-toggle com.system76.CosmicSettings \"cosmic-settings power\""
     },
 
     "network": {
@@ -122,7 +121,7 @@
         },
         "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nFrequency: {frequency}MHz",
         "tooltip-format-disconnected": "Disconnected", 
-        "on-click": "~/.local/bin/app-toggle com.system76.CosmicSettings \"cosmic-settings network\""
+        "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
@@ -140,7 +139,7 @@
             "level-high": 100
             },
         "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
-        "on-click": "~/.local/bin/app-toggle com.system76.CosmicSettings \"cosmic-settings sound\"",
+        "on-click": "pavucontrol",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
 

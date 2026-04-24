@@ -1,0 +1,102 @@
+#TabsToolbar {
+    overflow: hidden !important;
+}
+
+.tabbrowser-arrowscrollbox {
+    overflow: hidden !important;
+}
+
+.tabbrowser-arrowscrollbox > scrollbox,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+    transform: none !important;
+}
+
+.tabbrowser-tab {
+    min-width: 0 !important;
+}
+
+/* 2. Hide scroll buttons */
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down,
+.tabbrowser-scrollbox-overflow-indicator {
+    display: none !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+    min-width: 1px !important;
+    container-type: inline-size;
+    container-name: tab-container;
+}
+
+.tabbrowser-tab[fadein][selected]:not([pinned]),
+.tabbrowser-tab[fadein][visuallyselected]:not([pinned]) {
+    min-width: 150px !important;
+
+}
+.tabbrowser-tab[fadein][soundplaying]:not([pinned]):not([selected]) {
+    min-width: 70px !important;
+}
+@container tab-container (max-width: 10px) {
+    .tab-content {
+        padding-inline: 0px !important;
+        justify-content: center !important;
+    }
+    .tab-icon-image {
+        margin-inline: 0px !important;
+    }
+}
+
+.tabbrowser-tab[closing] {
+    min-width: 0px !important;
+    max-width: 0px !important;
+    padding-inline: 0px !important;
+    margin-inline: 0px !important;
+    opacity: 0 !important;
+    transition: all 150ms ease !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+#PersonalToolbar toolbarbutton:hover {
+    background: rgba(245, 245, 247, 0.08) !important;
+    border-radius: 6px !important;
+}
+.tabbrowser-tab:not([selected]):not(:hover)::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 25% !important;
+    height: 50% !important;
+    width: 1px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+.tabbrowser-tab[selected] + .tabbrowser-tab::after,
+.tabbrowser-tab[selected]::after {
+    display: none !important;
+}
+
+
+#TabsToolbar {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.6) !important;
+}
+
+#nav-bar {
+    padding-block: 5px !important; 
+}
+
+.tabbrowser-tab {
+    transition: none !important;
+}
+.tab-content {
+    transition: none !important;
+}
+.tab-background {
+    transition: none !important;
+}

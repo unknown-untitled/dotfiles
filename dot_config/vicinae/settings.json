@@ -18,9 +18,12 @@
    },
    "theme": {
       "dark": {
-         "name": "one-dark",
+         "name": "vicinae-dark",
          "icon_theme": "MoreWaita"
       }
+   },
+   "telemetry": {
+      "system_info": false
    },
    "launcher_window": {
       "opacity": 0.97,
