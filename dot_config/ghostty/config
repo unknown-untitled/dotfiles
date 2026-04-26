@@ -1,7 +1,7 @@
 font-family = Iosevka
 window-padding-x = 10
 window-padding-y = 5
-background = #141414
+background = #121212
 resize-overlay-duration = 1s 200ms
 window-subtitle = working-directory
 
@@ -13,11 +13,11 @@ window-inherit-working-directory = false
 window-decoration = server
 
 gtk-titlebar = true
-gtk-titlebar-style = native
+#gtk-titlebar-style = tabs 
 gtk-wide-tabs = true
 gtk-toolbar-style = raised
 
 # tab location (top, bottom, hidden)
 gtk-tabs-location = top
 
-background-opacity = 1
+background-opacity = 0.75

@@ -1,10 +1,25 @@
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "window_decorations": "server",
   "icon_theme": "Colored Zed Icons Theme Dark",
   "tabs": {
     "git_status": true,
   },
   "project_panel": {
+    "dock": "left",
     "button": true,
   },
   "title_bar": {

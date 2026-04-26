@@ -14,7 +14,7 @@ binds {
     XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
 
     Mod+G hotkey-overlay-title="Open a Terminal: ghostty"           { spawn "ghostty"; }
-    //Mod+D hotkey-overlay-title="Run an Application: fuzzel"         { spawn "fuzzel"; }
+    //Mod+D hotkey-overlay-title="Run an Application: fuzzel"       { spawn "fuzzel"; }
     Mod+D hotkey-overlay-title="Run an Application: vicinae"        { spawn "vicinae" "toggle"; }
     Mod+N hotkey-overlay-title="Open File Manager"                  { spawn "~/.local/bin/nautilus-toggle"; }
     Mod+T hotkey-overlay-title="Open or focuse a Terminal: ghostty" { spawn "~/.local/bin/ghostty-toggle"; }
@@ -25,7 +25,7 @@ binds {
     Mod+3 hotkey-overlay-title="Firefox"       { spawn "~/.local/bin/app-toggle" "org.mozilla.firefox" "firefox"; }
     //Mod+4 hotkey-overlay-title="Telegram"    { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "Telegram"; }
     Mod+4 hotkey-overlay-title="Telegram"      { spawn "~/.local/bin/app-toggle" "org.telegram.desktop" "flatpak run org.telegram.desktop"; }
-    //Mod+4 hotkey-overlay-title="Codium"        { spawn "~/.local/bin/app-toggle" "codium" "codium"; }
+    //Mod+4 hotkey-overlay-title="Codium"       { spawn "~/.local/bin/app-toggle" "codium" "codium"; }
     Mod+5 hotkey-overlay-title="Sublime Text"  { spawn "subl"; }
     Mod+6 hotkey-overlay-title="Nautilus"      { spawn "nautilus"; }
     Mod+7 hotkey-overlay-title="Obsidian"      { spawn "~/.local/bin/app-toggle" "obsidian" "flatpak run md.obsidian.Obsidian"; }

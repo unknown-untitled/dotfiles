@@ -1,32 +1,24 @@
-@define-color window_bg_color #141414;
-@define-color window_fg_color #f5f5f7;
-@define-color view_bg_color #1f1f1f;
-@define-color view_fg_color @window_fg_color;
-@define-color accent_bg_color #6f8396;
+@define-color headerbar_bg_color rgb(26, 26, 26);
+@define-color window_bg_color rgb(28, 28, 28);
+@define-color sidebar_bg_color rgb(26, 26, 26);
+@define-color view_bg_color rgb(34, 34, 34);
+
+@define-color headerbar_backdrop_color rgb(24, 24, 24);
+@define-color accent_bg_color rgb(10, 132, 255);
 @define-color accent_color @accent_bg_color;
-@define-color headerbar_bg_color #202020;
-@define-color headerbar_fg_color @window_fg_color;
-@define-color headerbar_backdrop_color #232323;
-@define-color popover_bg_color #282828;
-@define-color popover_fg_color @window_fg_color;
-@define-color popover_border_color #595959;
-@define-color dialog_bg_color @popover_bg_color;
-@define-color dialog_fg_color @popover_fg_color;
-@define-color card_bg_color rgba(245, 245, 247, 0.08);
-@define-color card_fg_color @window_fg_color;
-@define-color sidebar_bg_color #262626;
-@define-color sidebar_fg_color #ffffff;
-@define-color sidebar_border_color rgba(0, 0, 0, 0.6);
+
+@define-color card_bg_color rgba(245, 245, 245, 0.08);
+@define-color sidebar_border_color rgba(0, 0, 0, 0.4);
 @define-color sidebar_backdrop_color @sidebar_bg_color;
 @define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
-
+@define-color shade_color rgba(0, 0, 0, 0.2);
 
 headerbar.titlebar {
-    min-height: 38px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: none;
 }
 
+/*
 .titlebutton {
     background-color: #383838;
 }
@@ -39,6 +31,7 @@ headerbar.titlebar {
 .titlebutton:backdrop:hover {
     background-color: #393939;
 }
+*/
 
 popover,
 menu {

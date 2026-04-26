@@ -1,13 +1,27 @@
 #!/bin/bash
 # ~/.local/bin/app-toggle
-
 app_id="$1"
 launch_cmd="$2"
 
 windows_json=$(niri msg --json windows)
-if echo "$windows_json" | jq -e ".[] | select(.app_id == \"$app_id\")" > /dev/null; then
-    window_id=$(echo "$windows_json" | jq -r ".[] | select(.app_id == \"$app_id\") | .id" | head -1)
-    niri msg action focus-window --id "$window_id"
-else
+
+# get all app's windows 
+mapfile -t ids < <(echo "$windows_json" | jq -r ".[] | select(.app_id == \"$app_id\") | .id" | tac)
+if [ ${#ids[@]} -eq 0 ]; then
     $launch_cmd &
+    exit 0
 fi
+
+# current window id
+focused_id=$(echo "$windows_json" | jq -r '.[] | select(.is_focused == true) | .id')
+
+next_id="${ids[0]}"  
+for i in "${!ids[@]}"; do
+    if [ "${ids[$i]}" = "$focused_id" ]; then
+        next_index=$(( (i + 1) % ${#ids[@]} ))
+        next_id="${ids[$next_index]}"
+        break
+    fi
+done
+
+niri msg action focus-window --id "$next_id"

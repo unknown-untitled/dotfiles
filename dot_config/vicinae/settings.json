@@ -26,7 +26,7 @@
       "system_info": false
    },
    "launcher_window": {
-      "opacity": 0.97,
+      "opacity": 0.9,
       "client_side_decorations": {
          "enabled": true
       }
@@ -114,7 +114,7 @@
       "power": {
          "entrypoints": {
             "lock": {
-               "alias": "swaylock"
+               "alias": "veila lock"
             }
          }
       },

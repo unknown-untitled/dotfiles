@@ -22,8 +22,8 @@ window-rule {
 
     shadow {
         on
-        softness 30
-        spread 18
+        softness 36
+        spread 26
         color "#00000079"
         offset x=0 y=8
     }
@@ -53,43 +53,45 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^org\.gnome\.Calculator$"#
-    match app-id=r#"^org\.gnome\.Calendar$"#
-    match app-id=r#"^org\.gnome\.clocks$"#
-    match app-id=r#"^org\.gnome\.Contacts$"#
-    match app-id=r#"^org\.gnome\.TextEditor$"#
-    match app-id=r#"^org\.gnome\.Loupe$"#
-    match app-id=r#"^org\.gnome\.Weather$"#
-    match app-id=r#"^org\.gnome\.Maps$"#
-    match app-id=r#"^org\.gnome\.Music$"#
-    match app-id=r#"^org\.gnome\.Settings$"#
-    match app-id=r#"^org\.gnome\.Software$"#
-    match app-id=r#"^org\.gnome\.Console$"#
-    match app-id=r#"^org\.gnome\.baobab$"#
-    match app-id=r#"^org\.gnome\.DiskUtility$"#
-    match app-id=r#"^org\.gnome\.Logs$"#
+    match app-id="org.gnome.Nautilus"
+    match app-id="org.gnome.Calculator"
+    match app-id="org.gnome.Calendar"
+    match app-id="org.gnome.clocks"
+    match app-id="org.gnome.Contacts"
+    match app-id="org.gnome.TextEditor"
+    match app-id="org.gnome.Loupe"
+    match app-id="org.gnome.Weather"
+    match app-id="org.gnome.Maps"
+    match app-id="org.gnome.Music"
+    match app-id="org.gnome.Settings"
+    match app-id="org.gnome.Software"
+    match app-id="org.gnome.Console"
+    match app-id="org.gnome.baobab"
+    match app-id="org.gnome.DiskUtility"
+    match app-id="org.gnome.Logs"
     match app-id="org.gnome.SystemMonitor"
-    match app-id=r#"^org\.gnome\.Characters$"#
-    match app-id=r#"^org\.gnome\.Extensions$"#
-    match app-id=r#"^org\.gnome\.Evince$"#
-    match app-id=r#"^org\.gnome\.font-viewer$"#
-    match app-id=r#"^org\.gnome\.Snapshot$"#
-    match app-id=r#"^org\.gnome\.Showtime$"#
-    match app-id=r#"^io\.missioncenter\.MissionCenter$"#
-    match app-id=r#"^org\.gnome\.gitlab\.YaLTeR\.VideoTrimmer$"#
-    match app-id=r#"^io\.github\.celluloid_player\.Celluloid$"#
-    match app-id=r#"^org\.gnome\.Totem$"#
-    match app-id=r#"^com\.mitchellh\.ghostty$"#
+    match app-id="org.gnome.Characters"
+    match app-id="org.gnome.Extensions"
+    match app-id="org.gnome.Evince"
+    match app-id="org.gnome.font-viewer"
+    match app-id="org.gnome.Snapshot"
+    match app-id="org.gnome.Showtime"
+    match app-id="adwaita-1-demo"
+    match app-id="io.missioncenter.MissionCenter"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+    match app-id="io.github.celluloid_player.Celluloid"
+    match app-id="org.gnome.Totem$"
+    match app-id="com.mitchellh.ghostty"
     match app-id="org.altlinux.Tuner"
-    match app-id=r#"^page\.tesk\.Refine$"#
-    match app-id=r#"^com\.github\.finefindus\.eyedropper$"#
-    match app-id=r#"^com\.github\.tchx84\.Flatseal$"#
-    match app-id=r#"^org\.gnome\.Papers$"#
-    match app-id=r"com.github.PintaProject.Pinta$"
-    match app-id=r"org.gnome.gitlab.somas.Apostrophe"
+    match app-id="page.tesk.Refine"
+    match app-id="com.github.finefindus.eyedropper$"
+    match app-id="com.github.tchx84.Flatseal"
+    match app-id="org.gnome.Papers"
+    match app-id="com.github.PintaProject.Pinta"
+    match app-id="org.gnome.gitlab.somas.Apostrophe"
     match app-id="io.gitlab.adhami3310.Footage"
     match app-id="xdg-desktop-portal-gnome"
+    match app-id="org.gnome.Adwaita1.Demo"
     match app-id="org.gnome.Yelp"
     match app-id="org.gnome.Decibels"
     match app-id="org.pulseaudio.pavucontrol"
@@ -100,6 +102,13 @@ window-rule {
 
     border {
         off
+    }
+}
+
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    background-effect {
+        blur true
     }
 }
 
@@ -165,8 +174,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id="org.gnome.Calendar$"
-    match app-id="org.gnome.Nautilus$"
+    match app-id="org.gnome.Calendar"
+    match app-id="org.gnome.Nautilus"
     default-column-width { proportion 0.57; }
     default-window-height { proportion 0.7; }
 }
@@ -214,16 +223,23 @@ layer-rule {
         offset x=10 y=10
     }
 }
+layer-rule {
+    match namespace="ironbar"
+}
 
 layer-rule {
     match namespace="vicinae"
     geometry-corner-radius 10
     shadow {
         on
-        softness 30
-        spread 18
+        softness 36
+        spread 26
         color "#00000079"
         offset x=0 y=8
+    }
+    background-effect {
+        blur true
+        xray false
     }
 }
 
@@ -231,3 +247,4 @@ layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
+
