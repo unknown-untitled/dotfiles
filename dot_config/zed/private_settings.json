@@ -1,17 +1,17 @@
 {
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "window_decorations": "server",
   "icon_theme": "Colored Zed Icons Theme Dark",
@@ -23,8 +23,8 @@
     "button": true,
   },
   "title_bar": {
+    "show_branch_status_icon": true,
     "show_branch_name": true,
-    "show_branch_icon": true,
     "show_menus": false,
     "show_user_menu": true,
     "show_user_picture": false,
@@ -33,7 +33,24 @@
   "buffer_font_size": 15,
   "theme": "VSCode Dark Modern",
   "experimental.theme_overrides": {
+    "background.appearance": "transparent",
     "border": "#282828",
     "border.variant": "#363636",
+    "background": "#12121280",
+    "editor.background": "#20202080",
+    "editor.gutter.background": "#1f1f1f99",
+    "editor.active_line.background": "#ffffff0a",
+    "elevated_surface.background": "#121212ff",
+    "surface.background": "#18181899",
+    "panel.background": "#12121280",
+    "tab_bar.background": "#20202080",
+    "tab.active_background": "#4f4f4f80",
+    "tab.inactive_background": "#00000000",
+    "title_bar.background": "#141414",
+    "title_bar.inactive_background": "#121212",
+    "status_bar.background": "#141414",
+    "toolbar.background": "#1f1f1f99",
+    "terminal.background": "#09090980",
+    "terminal.ansi.background": "#18181899",
   },
 }

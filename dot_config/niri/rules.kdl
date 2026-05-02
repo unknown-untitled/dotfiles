@@ -53,7 +53,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="org.gnome.Nautilus"
+    match app-id="^org\\.gnome\\.Nautilus$"
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.Calendar"
     match app-id="org.gnome.clocks"
@@ -143,9 +143,9 @@ window-rule {
     match app-id="org.gnome.clocks"
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
-    match app-id="org.gnome.NautilusPreviewer$"
-    match app-id="org.gnome.Showtime$"
-    match app-id="org.gnome.Calendar$"
+    match app-id="org.gnome.NautilusPreviewer"
+    match app-id="org.gnome.Showtime"
+    match app-id="org.gnome.Calendar"
     match app-id="org.gnome.Weather"
     match app-id="org.altlinux.Tuner"
     match app-id="pavucontrol"   
@@ -203,7 +203,6 @@ window-rule {
 layer-rule {
     match namespace="waybar"
     shadow {
-        
         softness 4
         spread 1
         color "#00000090" 
@@ -220,7 +219,7 @@ layer-rule {
         softness 50
         spread 10
         color "#00000090" 
-        offset x=10 y=10
+        offset x=0 y=0
     }
 }
 layer-rule {
@@ -242,9 +241,31 @@ layer-rule {
         xray false
     }
 }
+layer-rule {
+    match namespace="swayosd"
+    geometry-corner-radius 10
+    shadow {
+        on
+        softness 30
+        spread 2
+        color "#00000079"
+        offset x=0 y=2
+    }
+    opacity 0.75
+    background-effect {
+        blur true
+        xray false
+    }
 
+}
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
 
+window-rule {
+    match app-id=r#"^dev\.zed\.Zed$"#
+    background-effect {
+        blur true
+    }
+}

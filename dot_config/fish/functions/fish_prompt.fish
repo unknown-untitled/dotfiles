@@ -12,8 +12,8 @@ function fish_prompt
     echo -n ' $ '
 end
 
-function fish_right_prompt
-    set_color brblack
-    date '+%H:%M'
-end
+#function fish_right_prompt
+#    set_color brblack
+#    date '+%H:%M'
+#end
 

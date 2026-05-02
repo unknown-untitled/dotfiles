@@ -63,3 +63,22 @@ placessidebar separator {
     border: none;
 }
 
+toast {
+    outline: 1px solid rgba(255, 255, 255, 0.22);
+    outline-offset: -2px;
+    background-color: rgba(52, 52, 52, 0.98);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 4px 10px rgba(0, 0, 0, 0.3),
+}
+dialog.alert .message-area,
+dialog.alert .response-area {
+    background-color: rgb(34, 34, 34);
+
+}
+
+ {
+    background-color: rgb(34, 34, 34);
+}

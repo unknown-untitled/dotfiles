@@ -20,4 +20,7 @@ gtk-toolbar-style = raised
 # tab location (top, bottom, hidden)
 gtk-tabs-location = top
 
-background-opacity = 0.75
+background-opacity = 0.4
+
+copy-on-select = clipboard
+#clipboard-trim-trailing-spaces = true
