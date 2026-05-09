@@ -24,3 +24,10 @@ background-opacity = 0.4
 
 copy-on-select = clipboard
 #clipboard-trim-trailing-spaces = true
+
+
+#keybinds
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+shift+x=close_surface
+keybind = ctrl+tab=goto_split:next

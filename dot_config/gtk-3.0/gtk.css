@@ -13,7 +13,13 @@
 @define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
 @define-color shade_color rgba(0, 0, 0, 0.2);
 
+@define-color theme_fg_color #ffffff;
+@define-color theme_text_color #ffffff;
+@define-color theme_unfocused_fg_color #ffffff;
+@define-color theme_unfocused_text_color #ffffff;
+
 headerbar.titlebar {
+    min-height: 38px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: none;
 }

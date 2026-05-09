@@ -1,6 +1,6 @@
 @define-color headerbar_bg_color rgb(26, 26, 26);
 @define-color window_bg_color rgb(28, 28, 28);
-@define-color sidebar_bg_color rgb(26, 26, 26);
+@define-color sidebar_bg_color rgba(26, 26, 26, 0.4);
 @define-color view_bg_color rgb(34, 34, 34);
 
 @define-color headerbar_backdrop_color rgb(24, 24, 24);
@@ -13,6 +13,14 @@
 @define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
 @define-color shade_color rgba(0, 0, 0, 0.2);
 
+@define-color window_fg_color #ffffff;
+@define-color view_fg_color #ffffff;
+@define-color headerbar_fg_color #ffffff;
+@define-color popover_fg_color #ffffff;
+@define-color card_fg_color #ffffff;
+@define-color dialog_fg_color #ffffff;
+@define-color sidebar_fg_color #ffffff;
+@define-color accent_fg_color #ffffff;
 
 windowcontrols button image,
 windowcontrols > button:backdrop > image {
@@ -76,9 +84,9 @@ toast {
 dialog.alert .message-area,
 dialog.alert .response-area {
     background-color: rgb(34, 34, 34);
-
 }
 
- {
-    background-color: rgb(34, 34, 34);
+dialog {
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
 }

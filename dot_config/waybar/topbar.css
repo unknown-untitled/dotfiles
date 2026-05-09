@@ -57,7 +57,9 @@ tooltip label {
 #custom-settings,
 #custom-settings:hover,
 #bluetooth,
-#bluetooth:hover {
+#bluetooth:hover,
+#mpris,
+#mpris:hover {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,6 +100,16 @@ tooltip label {
 #battery,
 #battery:hover {
     background-size: 26px;
+}
+
+#mpris.playing {
+    background-image: url("/home/user/.config/waybar/icons/player-play.svg");
+    background-size: 16px;
+}
+
+#mpris.paused {
+    background-image: url("/home/user/.config/waybar/icons/player-pause.svg");
+    background-size: 16px;
 }
 
 #custom-settings,

@@ -8,6 +8,7 @@
     "modules-right": [
         "tray",
         "custom/docker",
+        "mpris",
         "niri/language",
         "privacy",
         "network",
@@ -15,7 +16,7 @@
         "pulseaudio",
         "battery",
         "custom/settings"
-        ],
+    ],
 
    "bluetooth": {
         "format": "",
@@ -28,9 +29,16 @@
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias} — {device_battery_percentage}%",
         "on-click": "blueman-manager"
-
     },
-    
+
+    "mpris": {
+        "format": " ",
+        "format-paused": " ",
+        "format-stopped": "",
+        "tooltip-format": "{title}\n{artist}",
+        "on-click": "playerctl play-pause",
+    },
+
     "custom/docker": {
         "exec": "~/.config/waybar/scripts/docker-toggle.sh",
         "return-type": "json",
@@ -60,11 +68,10 @@
     },
 
     "privacy": {
-        "icon-spacing": 2,
+        "icon-spacing": 30,
         "icon-size": 16,
         "transition-duration": 250,
-            "modules": [
-                {
+            "modules": [{
                 "type": "screenshare",
                 "tooltip": true,
                 "tooltip-icon-size": 24
@@ -73,16 +80,11 @@
                 "type": "audio-in",
                 "tooltip": true,
                 "tooltip-icon-size": 24
-                }
-            ],
+                }],
         "ignore-monitor": true,
         "ignore": [{
             "type": "audio-in",
             "name": "cava"
-            },
-            {
-            "type": "screenshare",
-            "name": "obs"
             }]
     },
     

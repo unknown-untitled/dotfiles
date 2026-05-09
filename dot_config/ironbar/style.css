@@ -1,7 +1,8 @@
 window {
-    background: transparent;
+    background: rgba(14, 14, 14, 0.1);
+    border-top: 1px solid rgba(77, 77, 77, 0.6);
 }
-
+/*
 #bar #center {
     background-color: rgba(23, 23, 23, 0.9);
     border-radius: 12px;
@@ -9,8 +10,7 @@ window {
     outline: 1px solid rgba(255, 255, 255, 0.26);
     outline-offset: -2px;
 }
-
-/* Launcher */
+*/
 .launcher,
 .launcher .item {
     background: transparent;
@@ -18,7 +18,7 @@ window {
 }
 
 .launcher {
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     padding-right: 2px;
     padding-left: 2px;
 }
