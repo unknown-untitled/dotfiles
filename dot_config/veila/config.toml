@@ -1,0 +1,77 @@
+[background]
+mode = "file"
+path = "/home/user/.config/wallpapers/lock.png"
+
+[weather]
+enabled = false
+
+[visuals.now_playing]
+enabled = false
+
+[visuals.clock]
+format = "24h"
+font_family = "Adwaita Sans"
+font_weight = 650
+font_style = "normal"
+color = "#ffffff"
+opacity = 80
+
+[visuals.date]
+format = "24h"
+font_family = "Adwaita Sans"
+font_weight = 650
+font_style = "normal"
+color = "#ffffff"
+opacity = 80
+
+[visuals.placeholder]
+color = "#ffffff"
+opacity = 98
+
+[visuals.keyboard]
+background_size = 46
+background_color = "rgba(255, 255, 255, 0)"
+color = "#ffffff"
+opacity = 90
+top_offset = -36
+right_offset = -40
+size = 2
+
+[visuals.battery]
+background_color = "rgba(255, 255, 255, 0)"
+background_size = 46
+color = "#ffffff"
+opacity = 90
+size = 21
+top_offset = -36
+right_offset = 70
+gap = 8
+
+[visuals.input]
+background_color = "#FFFFFF"
+background_opacity = 10
+width = 310
+height = 46
+radius = 8
+mask_color = "#ffffff"
+font_family = "Adwaita Sans"
+font_weight = 400
+font_size = 2
+
+[visuals.avatar]
+size = 120
+gap = 14
+background_color = "#ffffff"
+background_opacity = 10
+placeholder_padding = 28
+
+[visuals.username]
+font_family = "Google Sans Flex"
+font_weight = 400
+color = "#ffffff"
+opacity = 84
+size = 3
+gap = 14
+
+[lock]
+auto_reload_config = true
